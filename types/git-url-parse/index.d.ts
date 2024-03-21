@@ -6,7 +6,9 @@ declare namespace gitUrlParse {
         /** The url domain (including subdomains). */
         resource: string;
         /** The authentication user (usually for ssh urls). */
+        host: string;
         user: string;
+        password: string;
         pathname: string;
         hash: string;
         search: string;
@@ -18,6 +20,8 @@ declare namespace gitUrlParse {
         source: string;
         /** The repository owner. */
         owner: string;
+        /** commit hash if aviable from url */
+        commit?: string;
         /** The repository name. */
         name: string;
         /** The repository ref (e.g., "master" or "dev"). */
